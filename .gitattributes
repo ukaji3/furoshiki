@@ -1,0 +1,8 @@
+# Keep every text file LF on checkout, whatever core.autocrlf says.
+#
+# The runtime assets under internal/shell are compiled into the binary with
+# go:embed and the tests compare them (and the testdata fixtures) byte for
+# byte; a CRLF checkout on Windows would change their length and content.
+* text=auto eol=lf
+
+*.png binary
