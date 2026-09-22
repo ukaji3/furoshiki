@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>About - Site1</title>
+<link rel="stylesheet" href="css/site.css">
+<script src="js/app.js" defer></script>
+</head>
+<body class="about">
+<h1 id="heading">About</h1>
+<p id="js-status">js not run</p>
+<p><a id="back-home" href="./">Home</a> | <a id="to-guide" href="docs/guide.html">Guide</a> | <a id="self-frag" href="#details">Details</a></p>
+<img src="img/logo.png" alt="logo">
+<div style="height: 2000px"></div>
+<h2 id="details">Details</h2>
+<p id="dynamic-links"></p>
+<script>
+  // A link created at run time: the bundler never sees it, the shim routes it.
+  var a = document.createElement('a');
+  a.id = 'dynamic-link';
+  a.href = 'docs/guide.html';
+  a.textContent = 'dynamic';
+  document.getElementById('dynamic-links').appendChild(a);
+</script>
+</body>
+</html>

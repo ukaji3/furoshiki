@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html{{if .Lang}} lang="{{.Lang}}"{{end}}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="{{.Generator}}">
+<title>{{.Title}}</title>
+<style>
+{{.CSS}}
+</style>
+</head>
+<body>
+<noscript>
+<div class="furoshiki-message" role="alert">
+<h1>JavaScript is required</h1>
+<p>This file is a furoshiki bundle: a whole web site packed into a single HTML file. The pages inside it are unpacked by a small script, so JavaScript must be enabled to view them.</p>
+<p lang="ja">このファイルは furoshiki で1ファイルにまとめられたウェブサイトです。中のページを表示するには JavaScript を有効にしてください。</p>
+</div>
+</noscript>
+<main id="furoshiki-view" aria-live="polite"></main>
+<script type="application/json" id="furoshiki-payload">{{.Payload}}</script>
+<script>
+{{.JS}}
+</script>
+</body>
+</html>

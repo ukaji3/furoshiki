@@ -1,0 +1,60 @@
+/* furoshiki shell: the top-level document is only a frame around the page
+   currently displayed, so it takes the whole viewport and never scrolls
+   itself; the embedded page scrolls inside the iframe. */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+#furoshiki-view {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#furoshiki-view > iframe {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.furoshiki-message {
+  box-sizing: border-box;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans CJK JP", sans-serif;
+  color: #222;
+}
+
+.furoshiki-message h1 {
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+.furoshiki-message code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: #f3f3f3;
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+/* While the top document is being printed the frame is expanded to the full
+   height of the embedded page (see the runtime's beforeprint handler), so
+   the containers must be allowed to grow. */
+html.furoshiki-print,
+html.furoshiki-print body {
+  height: auto;
+  overflow: visible;
+}
+
+html.furoshiki-print #furoshiki-view {
+  position: static;
+}

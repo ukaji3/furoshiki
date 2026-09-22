@@ -1,0 +1,3 @@
+:root { --brand: rgb(200, 30, 30); }
+h1 { color: var(--brand); }
+body.home h1 { border-bottom: 3px solid var(--brand); }

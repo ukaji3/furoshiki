@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site1 ホーム</title>
+<link rel="icon" href="img/icon.svg">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/app.js" defer></script>
+<script src="js/home.js" defer></script>
+<style>
+  .hero { background-image: url(img/bg.png); }
+</style>
+</head>
+<body class="home">
+<header>
+  <img id="logo" src="img/logo.png" alt="logo" width="40" height="40">
+  <nav>
+    <a id="nav-about" href="about.html">About</a>
+    <a id="nav-docs" href="docs/">Docs</a>
+    <a id="nav-guide" href="docs/guide.html#install">Guide (install)</a>
+    <a id="nav-sjis" href="sjis.html">Shift_JIS page</a>
+    <a id="nav-frame" href="frame.html">Framed</a>
+    <a id="nav-external" href="https://example.com/">External</a>
+    <a id="nav-download" href="files/notes.txt">Download</a>
+    <a id="nav-draft" href="drafts/secret.html">Draft</a>
+    <a id="nav-missing" href="missing.html">Missing</a>
+    <a id="nav-top" href="#top">Top</a>
+  </nav>
+</header>
+<main id="top">
+  <h1 id="heading">Site1</h1>
+  <p class="hero" id="hero">hero</p>
+  <p id="js-status">js not run</p>
+  <p id="home-status">home js not run</p>
+  <img src="img/nope.png" alt="missing image">
+  <p style="background: url('img/bg.png')">inline style</p>
+  <svg width="10" height="10"><use href="img/sprite.svg#dot"/></svg>
+  <div style="height: 3000px"></div>
+  <p id="bottom">bottom</p>
+</main>
+</body>
+</html>
